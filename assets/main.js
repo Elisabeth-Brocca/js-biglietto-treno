@@ -17,18 +17,18 @@ let eta = prompt("Età del passeggero")
 // il prezzo del biglietto è definito in base ai km (0.21 € al km)
 let prezzo = chilometri * 0.21
 
+let prezzoUmano = prezzo.toFixed(2);
 if(eta < 18 ){
     // va applicato uno sconto del 20% per i minorenni
-    let prezzoScontato = prezzo - (0.2 * prezzo)
-    console.log(prezzoScontato);    
+    let prezzoScontato = prezzoUmano - (0.2 * prezzoUmano);
+    let prezzoScontatoUmano = prezzoScontato.toFixed(2);
+    console.log(prezzoScontatoUmano);  
 }else if( eta > 65){
     //va applicato uno sconto del 40% per gli over 65
-    let prezzoScontato = prezzo - (0.4 * prezzo)
-    console.log(prezzoScontato); 
+    let prezzoScontato = prezzoUmano - (0.4 * prezzoUmano);
+    let prezzoScontatoUmano = prezzoScontato.toFixed(2);
+    console.log(prezzoScontatoUmano); 
     
 } else {
-    console.log(prezzo);
+    console.log(prezzoUmano);
 }
-
-
-
